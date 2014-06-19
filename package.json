@@ -1,0 +1,13 @@
+{
+  "name": "capnp-sublime",
+  "version": "0.1.0",
+  "author": "Jason Paryani <github@jparyani.com>",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-convert": "*",
+    "grunt-rename": "*",
+    "grunt-contrib-watch": "*",
+    "matchdep": "*"
+  }
+}

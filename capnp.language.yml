@@ -1,0 +1,30 @@
+name: "Cap'n Proto"
+scopeName: source.capnp
+fileTypes: [capnp]
+foldingStartMarker: "\{\s*$"
+foldingStopMarker: "^\s*\}"
+uuid: D65F6EC0-F768-11E3-A1D9-0800273FD7DC
+patterns:
+    -   # Single-line comment
+        captures:
+            1: { name: punctuation.definition.comment }
+        match: (\#).*$
+        name: comment.line
+    -   # Major keywords
+        match: '\b(struct|enum|interface|union|import|using|const|annotation|extends|in|of|on|as|with|from|fixed)\b'
+        name: 'keyword.control'
+
+    -   # ordinals and uuid
+        match: '\@\w+'
+        name: 'constant.other'
+
+    -   # functions
+        match: '(\w+)\s+(@\d+).*->'
+        captures:
+            1: { name: support.function }
+            2: { name: constant.other }
+
+    -   # functions
+        match: ':\w+'
+        name: 'support.type'
+
